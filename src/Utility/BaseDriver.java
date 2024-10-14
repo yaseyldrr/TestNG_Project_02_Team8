@@ -20,9 +20,13 @@ public class BaseDriver {
     public static WebDriver driver;
     public static WebDriverWait wait;
 
+    // WARNING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // ARKADAŞLAR BURALARDA DEĞİŞİKLİK YAPMAYIN, GEREKLİ OLAN KISIMLARI BIRAKTIM, PROJE BİTTİKTEN SONRA BEN DÜZENLEYİP ATICAM, KOLAY GELSİN
+
     @BeforeClass
-    @Parameters("browserType")
-    public void startUp(String browserType) {
+    //@Parameters("browserType")
+    //public void startUp(String browserType) {
+    public void startUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
@@ -30,16 +34,16 @@ public class BaseDriver {
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 
-        switch (browserType.toLowerCase())
-        {
-            case "firefox": driver=new FirefoxDriver();break;
-            default: driver=new ChromeDriver();
-        }
+        //switch (browserType.toLowerCase())
+        //{
+        //    case "firefox": driver=new FirefoxDriver();break;
+        //    default: driver=new ChromeDriver();
+        //}
 
     }
-    @AfterClass
-    public void tearDown() {
-        driver.quit();
-    }
+    //@AfterClass
+    //public void tearDown() {
+    //    driver.quit();
+    //}
 
 }
