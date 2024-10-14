@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="My Suit" parallel="tests" thread-count="2">
+    <test name="Smoke Test">
+        <parameter name="browserType" value="firefox"></parameter>
+
+        <classes>
+
+        </classes>
+    </test>
+</suite>
