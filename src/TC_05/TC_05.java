@@ -29,8 +29,6 @@ public class TC_05 extends BaseDriver {
         driver.navigate().back();
         tc.linkedin.click();
 
-
-
     }
 
 }

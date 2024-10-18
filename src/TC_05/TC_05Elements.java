@@ -5,10 +5,8 @@ import Utility.BaseDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class TC_05Elements {
-    public TC_05Elements() {
+    public TC_05Elements() {PageFactory.initElements(BaseDriver.driver, this); }
 
-        PageFactory.initElements(BaseDriver.driver, this);
-    }
     @FindBy (xpath = "//*[@id='rec684017893']")
     public WebElement dw;
 
