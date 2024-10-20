@@ -12,7 +12,7 @@ import java.time.Duration;
 import java.util.Set;
 
 public class TC_08 extends BaseDriver {
-    @Test
+    @Test(groups = {"Smoke Test"})
     public void Test(){
         TC_08Elements tc=new TC_08Elements();
         JavascriptExecutor js = (JavascriptExecutor)driver;

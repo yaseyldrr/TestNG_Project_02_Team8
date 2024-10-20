@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class TC_01 extends BaseDriver {
 
-    @Test(groups = "Smoke Test")
+    @Test(groups = {"Smoke Test"})
     public void DropdownMenu(){
 
         TC_01Elements tc=new TC_01Elements();

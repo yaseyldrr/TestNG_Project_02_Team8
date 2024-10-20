@@ -1,13 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <suite name="My Suit" parallel="tests" thread-count="2">
-    <test name="Regression Test">
+    <test name="Parallel1">
         <parameter name="browserType" value="firefox"></parameter>
-        <parameter name="browserType"></parameter>
 
         <classes>
-
-
+            <class name="TC_03.TC_03"></class>
+            <class name="TC_04.TC_04"></class>
+            <class name="TC_05.TC_05"></class>
         </classes>
+        <groups>
+            <run>
+                <include name="Regression Test"></include>
+            </run>
+        </groups>
+
+    </test>
+    <test name="Parallel2">
+        <parameter name="browserType" value="chrome"></parameter>
+
+        <classes>
+            <class name="TC_03.TC_03"></class>
+            <class name="TC_04.TC_04"></class>
+            <class name="TC_05.TC_05"></class>
+        </classes>
+        <groups>
+            <run>
+                <include name="Regression Test"></include>
+            </run>
+        </groups>
+
     </test>
 </suite>

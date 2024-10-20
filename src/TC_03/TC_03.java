@@ -2,10 +2,12 @@ package TC_03;
 
 import Utility.BaseDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.annotations.Test;
 
 public class TC_03 extends BaseDriver {
-    TC_03Elements sc = new TC_03Elements();
-
+    @Test(groups = {"Regression Test"})
+    public void Test() {
+        TC_03Elements sc = new TC_03Elements();
         driver.get("https://techno.study/tr/");
         wait.until(ExpectedConditions.elementToBeClickable(sc.sbmtbttn));
 
@@ -25,5 +27,6 @@ public class TC_03 extends BaseDriver {
 
         wait.until(ExpectedConditions.visibilityOf(sc.verification));
         sc.verification.getText().equals("Başvurunuz alınmıştır");
+    }
 
 }

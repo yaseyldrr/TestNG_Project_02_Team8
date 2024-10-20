@@ -5,10 +5,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TC_02 extends BaseDriver {
-    @Test(groups = "Smoke Test")
-            public void Test() {
-
-
+    @Test(groups = {"Smoke Test"})
+    public void Test() {
         TC_02Elements tc = new TC_02Elements();
 
         driver.get("https://techno.study/tr/");

@@ -1,11 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <suite name="My Suit" parallel="tests" thread-count="2">
-    <test name="Smoke Test">
+    <test name="Parallel1">
+        <parameter name="browserType" value="chrome"></parameter>
+
+        <classes>
+            <class name="TC_01.TC_01"></class>
+            <class name="TC_02.TC_02"></class>
+            <class name="TC_06.TC_06"></class>
+            <class name="TC_07.TC_07"></class>
+            <class name="TC_08.TC_08"></class>
+        </classes>
+        <groups>
+            <run>
+                <include name="Smoke Test"></include>
+            </run>
+        </groups>
+
+    </test>
+    <test name="Parallel2">
         <parameter name="browserType" value="firefox"></parameter>
 
         <classes>
-
+            <class name="TC_01.TC_01"></class>
+            <class name="TC_02.TC_02"></class>
+            <class name="TC_06.TC_06"></class>
+            <class name="TC_07.TC_07"></class>
+            <class name="TC_08.TC_08"></class>
         </classes>
+        <groups>
+            <run>
+                <include name="Smoke Test"></include>
+            </run>
+        </groups>
+
     </test>
 </suite>

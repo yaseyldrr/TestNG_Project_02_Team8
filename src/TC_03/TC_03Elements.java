@@ -1,11 +1,16 @@
 package TC_03;
 
+import Utility.BaseDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class TC_03Elements {
-    public TC_03Elements() {PageFactory.initElements(BaseDriver.driver,this); }
+    public TC_03Elements() {
+        PageFactory.initElements(BaseDriver.driver,this);
+    }
 
-    @FindBy (xpath = "//a[@data-tilda-event-name='/tilda/click/rec515963418/button1660904954343']")
+    @FindBy(xpath = "//a[@data-tilda-event-name='/tilda/click/rec515963418/button1660904954343']")
     public WebElement sbmtbttn;
 
     @FindBy (name = "name")

@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 public class TC_05 extends BaseDriver {
-    @Test
+    @Test(groups = {"Regression Test"})
     public void Test(){TC_05Elements tc=new TC_05Elements();
         driver.get("https://techno.study/tr/");
         driver.manage().window().maximize();

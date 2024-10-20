@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TC_04 extends BaseDriver {
-    @Test
+    @Test(groups = {"Regression Test"})
     public void kurslarMenusu() throws InterruptedException {
         TC_04Elements elements = new TC_04Elements();
         driver.get("https://techno.study/tr/");
